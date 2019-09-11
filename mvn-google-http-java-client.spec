@@ -4,7 +4,7 @@
 #
 Name     : mvn-google-http-java-client
 Version  : 1.23.0
-Release  : 2
+Release  : 3
 URL      : https://github.com/googleapis/google-http-java-client/archive/1.23.0.tar.gz
 Source0  : https://github.com/googleapis/google-http-java-client/archive/1.23.0.tar.gz
 Source1  : https://repo1.maven.org/maven2/com/google/http-client/google-http-client-jackson2/1.22.0/google-http-client-jackson2-1.22.0.jar
