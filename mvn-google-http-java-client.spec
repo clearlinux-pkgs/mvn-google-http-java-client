@@ -4,24 +4,31 @@
 #
 Name     : mvn-google-http-java-client
 Version  : 1.23.0
-Release  : 3
+Release  : 4
 URL      : https://github.com/googleapis/google-http-java-client/archive/1.23.0.tar.gz
 Source0  : https://github.com/googleapis/google-http-java-client/archive/1.23.0.tar.gz
-Source1  : https://repo1.maven.org/maven2/com/google/http-client/google-http-client-jackson2/1.22.0/google-http-client-jackson2-1.22.0.jar
-Source2  : https://repo1.maven.org/maven2/com/google/http-client/google-http-client-jackson2/1.22.0/google-http-client-jackson2-1.22.0.pom
-Source3  : https://repo1.maven.org/maven2/com/google/http-client/google-http-client-jackson2/1.23.0/google-http-client-jackson2-1.23.0.jar
-Source4  : https://repo1.maven.org/maven2/com/google/http-client/google-http-client-jackson2/1.23.0/google-http-client-jackson2-1.23.0.pom
-Source5  : https://repo1.maven.org/maven2/com/google/http-client/google-http-client-parent/1.22.0/google-http-client-parent-1.22.0.pom
-Source6  : https://repo1.maven.org/maven2/com/google/http-client/google-http-client-parent/1.23.0/google-http-client-parent-1.23.0.pom
-Source7  : https://repo1.maven.org/maven2/com/google/http-client/google-http-client/1.22.0/google-http-client-1.22.0.jar
-Source8  : https://repo1.maven.org/maven2/com/google/http-client/google-http-client/1.22.0/google-http-client-1.22.0.pom
-Source9  : https://repo1.maven.org/maven2/com/google/http-client/google-http-client/1.23.0/google-http-client-1.23.0.jar
-Source10  : https://repo1.maven.org/maven2/com/google/http-client/google-http-client/1.23.0/google-http-client-1.23.0.pom
+Source1  : https://repo.gradle.org/gradle/libs-releases/com/google/http-client/google-http-client-jackson2/1.25.0/google-http-client-jackson2-1.25.0.jar
+Source2  : https://repo.gradle.org/gradle/libs-releases/com/google/http-client/google-http-client-jackson2/1.25.0/google-http-client-jackson2-1.25.0.pom
+Source3  : https://repo.gradle.org/gradle/libs-releases/com/google/http-client/google-http-client-parent/1.25.0/google-http-client-parent-1.25.0.pom
+Source4  : https://repo.gradle.org/gradle/libs-releases/com/google/http-client/google-http-client/1.25.0/google-http-client-1.25.0.jar
+Source5  : https://repo.gradle.org/gradle/libs-releases/com/google/http-client/google-http-client/1.25.0/google-http-client-1.25.0.pom
+Source6  : https://repo1.maven.org/maven2/com/google/http-client/google-http-client-jackson2/1.22.0/google-http-client-jackson2-1.22.0.jar
+Source7  : https://repo1.maven.org/maven2/com/google/http-client/google-http-client-jackson2/1.22.0/google-http-client-jackson2-1.22.0.pom
+Source8  : https://repo1.maven.org/maven2/com/google/http-client/google-http-client-jackson2/1.23.0/google-http-client-jackson2-1.23.0.jar
+Source9  : https://repo1.maven.org/maven2/com/google/http-client/google-http-client-jackson2/1.23.0/google-http-client-jackson2-1.23.0.pom
+Source10  : https://repo1.maven.org/maven2/com/google/http-client/google-http-client-parent/1.22.0/google-http-client-parent-1.22.0.pom
+Source11  : https://repo1.maven.org/maven2/com/google/http-client/google-http-client-parent/1.23.0/google-http-client-parent-1.23.0.pom
+Source12  : https://repo1.maven.org/maven2/com/google/http-client/google-http-client/1.22.0/google-http-client-1.22.0.jar
+Source13  : https://repo1.maven.org/maven2/com/google/http-client/google-http-client/1.22.0/google-http-client-1.22.0.pom
+Source14  : https://repo1.maven.org/maven2/com/google/http-client/google-http-client/1.23.0/google-http-client-1.23.0.jar
+Source15  : https://repo1.maven.org/maven2/com/google/http-client/google-http-client/1.23.0/google-http-client-1.23.0.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause xpp
 Requires: mvn-google-http-java-client-data = %{version}-%{release}
 Requires: mvn-google-http-java-client-license = %{version}-%{release}
+BuildRequires : apache-maven
+BuildRequires : buildreq-mvn
 
 %description
 # Google HTTP Client Library for Java
@@ -58,35 +65,50 @@ cp google-http-client-assembly/LICENSE.txt %{buildroot}/usr/share/package-licens
 cp google-http-client-assembly/dependencies/APACHE-LICENSE.txt %{buildroot}/usr/share/package-licenses/mvn-google-http-java-client/google-http-client-assembly_dependencies_APACHE-LICENSE.txt
 cp google-http-client-assembly/dependencies/BSD-LICENSE.txt %{buildroot}/usr/share/package-licenses/mvn-google-http-java-client/google-http-client-assembly_dependencies_BSD-LICENSE.txt
 cp google-http-client-assembly/dependencies/xpp3_LICENSE.txt %{buildroot}/usr/share/package-licenses/mvn-google-http-java-client/google-http-client-assembly_dependencies_xpp3_LICENSE.txt
-mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-jackson2/1.22.0
-cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-jackson2/1.22.0/google-http-client-jackson2-1.22.0.jar
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-jackson2/1.25.0
+cp %{SOURCE1} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-jackson2/1.25.0/google-http-client-jackson2-1.25.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-jackson2/1.25.0
+cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-jackson2/1.25.0/google-http-client-jackson2-1.25.0.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-parent/1.25.0
+cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-parent/1.25.0/google-http-client-parent-1.25.0.pom
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client/1.25.0
+cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client/1.25.0/google-http-client-1.25.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client/1.25.0
+cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client/1.25.0/google-http-client-1.25.0.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-jackson2/1.22.0
-cp %{SOURCE2} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-jackson2/1.22.0/google-http-client-jackson2-1.22.0.pom
+cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-jackson2/1.22.0/google-http-client-jackson2-1.22.0.jar
+
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-jackson2/1.22.0
+cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-jackson2/1.22.0/google-http-client-jackson2-1.22.0.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-jackson2/1.23.0
-cp %{SOURCE3} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-jackson2/1.23.0/google-http-client-jackson2-1.23.0.jar
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-jackson2/1.23.0/google-http-client-jackson2-1.23.0.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-jackson2/1.23.0
-cp %{SOURCE4} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-jackson2/1.23.0/google-http-client-jackson2-1.23.0.pom
+cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-jackson2/1.23.0/google-http-client-jackson2-1.23.0.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-parent/1.22.0
-cp %{SOURCE5} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-parent/1.22.0/google-http-client-parent-1.22.0.pom
+cp %{SOURCE10} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-parent/1.22.0/google-http-client-parent-1.22.0.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-parent/1.23.0
-cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-parent/1.23.0/google-http-client-parent-1.23.0.pom
+cp %{SOURCE11} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client-parent/1.23.0/google-http-client-parent-1.23.0.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client/1.22.0
-cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client/1.22.0/google-http-client-1.22.0.jar
+cp %{SOURCE12} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client/1.22.0/google-http-client-1.22.0.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client/1.22.0
-cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client/1.22.0/google-http-client-1.22.0.pom
+cp %{SOURCE13} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client/1.22.0/google-http-client-1.22.0.pom
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client/1.23.0
-cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client/1.23.0/google-http-client-1.23.0.jar
+cp %{SOURCE14} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client/1.23.0/google-http-client-1.23.0.jar
 
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client/1.23.0
-cp %{SOURCE10} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client/1.23.0/google-http-client-1.23.0.pom
+cp %{SOURCE15} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client/google-http-client/1.23.0/google-http-client-1.23.0.pom
 
 
 %files
@@ -98,12 +120,17 @@ cp %{SOURCE10} %{buildroot}/usr/share/java/.m2/repository/com/google/http-client
 /usr/share/java/.m2/repository/com/google/http-client/google-http-client-jackson2/1.22.0/google-http-client-jackson2-1.22.0.pom
 /usr/share/java/.m2/repository/com/google/http-client/google-http-client-jackson2/1.23.0/google-http-client-jackson2-1.23.0.jar
 /usr/share/java/.m2/repository/com/google/http-client/google-http-client-jackson2/1.23.0/google-http-client-jackson2-1.23.0.pom
+/usr/share/java/.m2/repository/com/google/http-client/google-http-client-jackson2/1.25.0/google-http-client-jackson2-1.25.0.jar
+/usr/share/java/.m2/repository/com/google/http-client/google-http-client-jackson2/1.25.0/google-http-client-jackson2-1.25.0.pom
 /usr/share/java/.m2/repository/com/google/http-client/google-http-client-parent/1.22.0/google-http-client-parent-1.22.0.pom
 /usr/share/java/.m2/repository/com/google/http-client/google-http-client-parent/1.23.0/google-http-client-parent-1.23.0.pom
+/usr/share/java/.m2/repository/com/google/http-client/google-http-client-parent/1.25.0/google-http-client-parent-1.25.0.pom
 /usr/share/java/.m2/repository/com/google/http-client/google-http-client/1.22.0/google-http-client-1.22.0.jar
 /usr/share/java/.m2/repository/com/google/http-client/google-http-client/1.22.0/google-http-client-1.22.0.pom
 /usr/share/java/.m2/repository/com/google/http-client/google-http-client/1.23.0/google-http-client-1.23.0.jar
 /usr/share/java/.m2/repository/com/google/http-client/google-http-client/1.23.0/google-http-client-1.23.0.pom
+/usr/share/java/.m2/repository/com/google/http-client/google-http-client/1.25.0/google-http-client-1.25.0.jar
+/usr/share/java/.m2/repository/com/google/http-client/google-http-client/1.25.0/google-http-client-1.25.0.pom
 
 %files license
 %defattr(0644,root,root,0755)
